@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="djangosurvey/css/style.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+	<div>
+		THANK YOU FOR SUBMITTING YOUR SURVEY!<br>
+		You have submitted a total of {{ request.session.total}} submissions.
+	</div>
+	<div>
+		First Name: {{request.session.name}}<br>
+		 Location: {{request.session.location}}<br>
+		 Language: {{request.session.language}}<br>
+		 Comments: {{request.session.comments}}<br>
+	</div>
+</body>
+
+</html>

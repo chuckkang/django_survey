@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+	<form method="POST" action="processform">
+		<p>Please Enter Your Survey Information</p>
+		{% csrf_token %}
+		Your Name : <input type="text" name="name" value=""><br>
+		Location : <select name="location">
+						<option value="Mountain View">Mountain View</option>
+						<option value="San Francisco">San Francisco</option>
+						<option value="Los Angeles">Los Angeles</option>
+						<option value="Chicago">Chicago</option>
+					</select><br><br>
+		Language : <select name="language">
+						<option value="Python">Python</option>
+						<option value="C">C#</option>
+						<option value="Javascript">Javascript</option>
+						<option value="Swift">Swift</option>
+					</select><br>
+		Comment : <textarea name="comments" rows="4" cols="50"></textarea><br>
+					<input type='hidden' name='total' value='0'>
+		<input type="submit" value="Submit Survey">
+
+	</form>
+</body>
+
+</html>
